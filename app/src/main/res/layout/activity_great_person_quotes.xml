@@ -18,7 +18,7 @@
             android:layout_gravity="center"
             android:scaleType="center"
             android:fitsSystemWindows="true"
-            android:id="@+id/img_view_buss"
+            android:id="@+id/img_view_gpq"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ImageView>
@@ -32,7 +32,7 @@
         android:elevation="30dp"
         app:cardElevation="20dp">
         <Button
-            android:id="@+id/btn_select_buss"
+            android:id="@+id/btn_select_gpq"
             android:background="@drawable/button_one"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,7 +49,7 @@
         android:elevation="30dp"
         app:cardElevation="20dp">
         <Button
-            android:id="@+id/btn_upload_buss"
+            android:id="@+id/btn_upload_gpq"
             android:background="@drawable/button_two"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -67,7 +67,7 @@
         android:backgroundTint="#FF0000">
 
         <Button
-            android:id="@+id/btn_edit_upload_buss"
+            android:id="@+id/btn_edit_upload_gpq"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"

@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SuccessMantraAdminLight">
-        <activity android:name=".EditVideoActivity"></activity>
+        <activity android:name=".EditGreatPersonQuotes"></activity>
+        <activity android:name=".GreatPersonQuotes" />
+        <activity android:name=".EditBussinessActivity" />
+        <activity android:name=".EditVideoActivity" />
         <activity android:name=".BusinessQuotes" />
         <activity android:name=".VideoMotivational" />
         <activity android:name=".MainActivity">

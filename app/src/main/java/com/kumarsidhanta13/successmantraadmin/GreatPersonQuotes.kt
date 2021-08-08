@@ -5,52 +5,52 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 
-class BusinessQuotes : AppCompatActivity() {
+class GreatPersonQuotes : AppCompatActivity() {
     lateinit var actionBar: ActionBar
-//    val VIDIO_PICK_GALLERY = 100
-    lateinit var btnUploadBuss:Button
-    lateinit var btnPickBuss:Button
-    lateinit var imageViewBuss: ImageView
-    lateinit var btnEditUploadBuss:Button
+    lateinit var btnUploadGpq: Button
+    lateinit var btnPickGpq: Button
+    lateinit var imageViewGpq: ImageView
+    lateinit var btnEditUploadGpq: Button
     var imageUri: Uri? = null
-    lateinit var etBussQuotes:EditText
+    lateinit var etGpqQuotes: EditText
     lateinit var progressDialog:ProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_business_quotes)
-        btnUploadBuss= findViewById(R.id.btn_upload_buss)
-        btnPickBuss = findViewById(R.id.btn_select_buss)
-        imageViewBuss = findViewById(R.id.img_view_buss)
-        btnEditUploadBuss = findViewById(R.id.btn_edit_upload_buss)
+        setContentView(R.layout.activity_great_person_quotes)
+        btnUploadGpq= findViewById(R.id.btn_upload_gpq)
+        btnPickGpq = findViewById(R.id.btn_select_gpq)
+        imageViewGpq = findViewById(R.id.img_view_gpq)
+        btnEditUploadGpq = findViewById(R.id.btn_edit_upload_gpq)
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Please Wait")
         progressDialog.setMessage("Uploading Image")
         progressDialog.setCanceledOnTouchOutside(false)
         actionBar = supportActionBar!!
-        actionBar.title = "Add New Bussiness Quote"
+        actionBar.title = "Add New Great Person Quote"
         actionBar.setDisplayHomeAsUpEnabled(true)
         actionBar.setDisplayHomeAsUpEnabled(true)
 
-        btnPickBuss.setOnClickListener {
-            Toast.makeText(this,"Clicked",Toast.LENGTH_SHORT).show()
-            bussPickGallery()
+        btnPickGpq.setOnClickListener {
+            Toast.makeText(this,"Clicked", Toast.LENGTH_SHORT).show()
+            gpqPickGallery()
         }
-        btnUploadBuss.setOnClickListener {
+        btnUploadGpq.setOnClickListener {
             if (imageUri == null) {
                 Toast.makeText(this, "Pick the Image first", Toast.LENGTH_SHORT).show()
             } else {
                 uploadImageToFirebase()
             }
         }
-        btnEditUploadBuss.setOnClickListener {
-            startActivity(Intent(this,EditBussinessActivity::class.java))
+        btnEditUploadGpq.setOnClickListener {
+            startActivity(Intent(this,EditGreatPersonQuotes::class.java))
         }
     }
     //    private fun videoPickDialog() {
@@ -64,7 +64,7 @@ class BusinessQuotes : AppCompatActivity() {
 //                }
 //            }
 //    }
-    private fun bussPickGallery(){
+    private fun gpqPickGallery(){
         var galleryIntent: Intent = Intent()
         galleryIntent.action = Intent.ACTION_GET_CONTENT
         galleryIntent.type = "image/*"
@@ -90,12 +90,12 @@ class BusinessQuotes : AppCompatActivity() {
 //            }
 //        }
         else{
-            Toast.makeText(this,"Cancelled",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Cancelled", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun setImageToVideoView() {
-        imageViewBuss.setImageURI(imageUri)
+        imageViewGpq.setImageURI(imageUri)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -106,7 +106,7 @@ class BusinessQuotes : AppCompatActivity() {
     private fun uploadImageToFirebase() {
         progressDialog.show()
         val timestamp = ""+System.currentTimeMillis()
-        val filePathAndName = "BusinessQuotes/image_$timestamp"
+        val filePathAndName = "GreatPersonQuotes/image_$timestamp"
         val storageReference = FirebaseStorage.getInstance().getReference(filePathAndName)
         val likes = 0
         storageReference.putFile(imageUri!!)
@@ -121,22 +121,21 @@ class BusinessQuotes : AppCompatActivity() {
                     hashMap["imageUri"] = "$downloadUri"
                     hashMap["likes"] = "$likes"
 
-                    val dbReference = FirebaseDatabase.getInstance().getReference("ImageBuss")
+                    val dbReference = FirebaseDatabase.getInstance().getReference("ImageGreatPersonQuotes")
                     dbReference.child(timestamp)
                         .setValue(hashMap)
                         .addOnSuccessListener {
                             progressDialog.dismiss()
-                            Toast.makeText(this,"Image Uploaded",Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,"Image Uploaded", Toast.LENGTH_SHORT).show()
                         }
                         .addOnFailureListener{
                             progressDialog.dismiss()
-                            Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,"Failed", Toast.LENGTH_SHORT).show()
                         }
                 }
             }
             .addOnFailureListener{
-                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Failed", Toast.LENGTH_SHORT).show()
             }
     }
-
-}
+    }
