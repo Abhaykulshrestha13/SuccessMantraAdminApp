@@ -1,0 +1,2 @@
+rootProject.name = "Success Mantra Admin"
+include ':app'
