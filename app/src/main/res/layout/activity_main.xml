@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/background_all">
+    android:background="@drawable/background_all"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -67,6 +68,135 @@
             android:layout_height="200dp"
             android:layout_margin="20dp"
             app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_lq_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nLove Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_sq_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nSuccess Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_atti_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nAttitude Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_dm_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nDaily Motivation Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_friend_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nFriendship Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_life_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nLife Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_money_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nMoney Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardElevation="30dp">
+            <Button
+                android:id="@+id/btn_positive_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Upload \nPositive Quotes"
+                android:textSize="28dp"
+                android:elevation="30dp"
+                android:textColor="@color/black">
+            </Button>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>
