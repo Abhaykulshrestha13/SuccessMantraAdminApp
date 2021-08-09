@@ -4,7 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditVideoActivity">
+    tools:context=".EditVideoActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_all">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_buss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_buss"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -13,5 +20,16 @@
         android:background="@drawable/background_all"
         tools:listitem="@layout/item_business">
     </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_error_buss"
+        android:layout_width="427dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Empty !!"
+        android:textColor="@color/black"
+        android:textSize="30dp"></TextView>
 
 </LinearLayout>

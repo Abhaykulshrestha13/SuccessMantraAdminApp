@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,LoveQuotes::class.java))
         }
         btnAtti.setOnClickListener {
-            startActivity(Intent(this,SuccessQuotes::class.java))
+            startActivity(Intent(this,AttitudeQuotes::class.java))
         }
         btnDQuotes.setOnClickListener {
             startActivity(Intent(this,DialyMotivationQuotes::class.java))

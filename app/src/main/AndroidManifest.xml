@@ -13,29 +13,51 @@
         android:theme="@style/Theme.SuccessMantraAdminLight"
         android:screenOrientation="portrait"
         >
-        <activity android:name=".EditAttitudeQuotes" />
-        <activity android:name=".EditDailyMotivationQuotes" />
-        <activity android:name=".EditFriendshipQuotes" />
-        <activity android:name=".EditLifeQuotes" />
-        <activity android:name=".EditMoneyQuotes" />
-        <activity android:name=".EditPositiveQuotes" />
-        <activity android:name=".PositiveQuotes" />
-        <activity android:name=".MoneyQuotes" />
-        <activity android:name=".LifeQuotes" />
-        <activity android:name=".FriendshipQuotes" />
-        <activity android:name=".DialyMotivationQuotes" />
-        <activity android:name=".AttitudeQuotes" />
-        <activity android:name=".EditSuccessQuotes" />
-        <activity android:name=".SuccessQuotes" />
-        <activity android:name=".EditLoveActivity" />
-        <activity android:name=".LoveQuotes" />
-        <activity android:name=".EditGreatPersonQuotes" />
-        <activity android:name=".GreatPersonQuotes" />
-        <activity android:name=".EditBussinessActivity" />
-        <activity android:name=".EditVideoActivity" />
-        <activity android:name=".BusinessQuotes" />
-        <activity android:name=".VideoMotivational" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".EditAttitudeQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditDailyMotivationQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditFriendshipQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditLifeQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditMoneyQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditPositiveQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PositiveQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MoneyQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LifeQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FriendshipQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DialyMotivationQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AttitudeQuotes"         android:screenOrientation="portrait"/>
+        <activity android:name=".EditSuccessQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SuccessQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditLoveActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LoveQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditGreatPersonQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GreatPersonQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditBussinessActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditVideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BusinessQuotes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VideoMotivational"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,5 +65,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
